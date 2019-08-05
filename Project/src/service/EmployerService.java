@@ -1,7 +1,9 @@
 package service;
 
+import pojo.Employee;
+
 public interface EmployerService 
 {
-	void callAddEmployee(employee refEmployee);
+	void callAddEmployee(Employee refEmployee);
 
 }

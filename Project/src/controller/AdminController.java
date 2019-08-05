@@ -4,13 +4,17 @@ import java.util.Scanner;
 
 import pojo.Employee;
 import service.EmployeeServiceImpl;
+import service.EmployerService;
 
 public class AdminController 
 {
-	public void userEmployeeController()
+	
+	Employee refEmployee;
+	EmployerService refEmployeeService;
+	public void adminProcess()
 	{
 		userInput();
-	}
+	}  //end of admin process
 	
 	
 		void userInput()
@@ -22,22 +26,24 @@ public class AdminController
 			
 			System.out.println("Enter Employee ID");
 			int empID=sc.nextInt();
-			refEmployee.setEmployeeID(empID);
+			refEmployee.setEmpID(empID);
 			
 			
 			System.out.println("Enter Employee Name");
-			int empName= sc.next();
-			refEmployee.setEmployeeName(empName);
+			String empName= sc.next();
+			refEmployee.setEmpName(empName);
 			
 			
-			System.out.println("Enter Employee Password");
+			System.out.println("Enter Employee Password");           
 			String empPassword=sc.next();
-			refEmployee.setEmployeePassword(empPassword);
+			refEmployee.setEmpPassword(empPassword);
 			
 			refEmployeeService.callAddEmployee(refEmployee);
 			
 			
 		}//end of userInput
+
+
 		
 
 	

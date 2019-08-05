@@ -23,7 +23,7 @@ public class EmployeeDAOImpl implements EmployeeDAO
 		{
 			System.out.println("DB Connection Error.....");
 		}
-	}
+	} //3.38-2.30=1.08
 	
 	@Override
 	public void addEmployee(Employee refEmployee)
@@ -33,10 +33,10 @@ public class EmployeeDAOImpl implements EmployeeDAO
 		try
 		{
 			psRef = conRef.prepareStatement("inset into employee(id,name,password) values (?,?,?)");
-			psRef.setInt(1, refEmployee.getEmployeeID());
+			psRef.setInt(1, refEmployee.getEmpID());
 			psRef.setString(2, refEmployee.getEmployeeName());
-			psRef.setString(3, refEmployee.getEmployeePassword());
-			psRef.setString(4, refEmployee.getEmployeeDob());
+			psRef.setString(3, refEmployee.getEmpPassword());
+			psRef.setString(4, refEmployee.getEmpDob());
 			
 			psRef.executeUpdate();
 			System.out.println("Record added successfully.......");

@@ -1,8 +1,8 @@
 package service;
 
-import controller.Employee;
 import dao.EmployeeDAO;
 import dao.EmployeeDAOImpl;
+import pojo.Employee;
 
 
 public class EmployeeServiceImpl implements EmployerService 
@@ -21,7 +21,9 @@ public class EmployeeServiceImpl implements EmployerService
 	}
 
 	
+
+	
 		
-	}
+	
 
 }
